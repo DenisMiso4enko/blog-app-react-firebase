@@ -26,6 +26,7 @@ function App() {
               id: user.uid,
               accessToken: user.accessToken,
               email: user.email,
+              displayName: user.displayName,
             })
           );
         } else {

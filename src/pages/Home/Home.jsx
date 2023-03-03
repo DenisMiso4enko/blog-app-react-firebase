@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <div>
-      Home
+      <h1 className="section-title">Blogs</h1>
       <div className="posts">
         {posts &&
           posts.map((post) => (

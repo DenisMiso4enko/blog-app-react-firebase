@@ -6,6 +6,7 @@ import BigPost from "../BigPost/BigPost.jsx";
 
 const OnePostPage = () => {
   const [data, setData] = useState(null);
+  console.log(data);
   const { postId } = useParams();
   const getPostInfo = async () => {
     try {

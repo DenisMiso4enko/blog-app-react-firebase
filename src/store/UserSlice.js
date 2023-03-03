@@ -5,6 +5,7 @@ const initialState = {
   id: null,
   token: null,
   posts: null,
+  displayName: null,
 };
 
 export const userSlice = createSlice({
@@ -15,6 +16,7 @@ export const userSlice = createSlice({
       state.email = action.payload.email;
       state.token = action.payload.accessToken;
       state.id = action.payload.id;
+      state.displayName = action.payload.displayName;
     },
     logOut(state) {
       state.email = null;

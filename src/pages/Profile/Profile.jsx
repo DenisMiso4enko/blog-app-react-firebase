@@ -22,7 +22,7 @@ const Profile = () => {
   return (
     <div>
       <h1>{user?.email}</h1>
-      <p>{user?.id}</p>
+      <p>{user?.displayName}</p>
       <button onClick={handleLogOut}>Выйти из аккаунта</button>
 
       <div>

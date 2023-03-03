@@ -30,12 +30,32 @@ const BigPost = ({
   };
   return (
     <div id={id}>
-      <h1>{title}</h1>
-      <p>Create by: {creator}</p>
-      <p>{text}</p>
-      <p>{createdAt}</p>
-      {image && <img style={{ width: "500px" }} src={image} alt="postImage" />}
-      {userCanDelete && <button onClick={handleDeletePost}>delete</button>}
+      <div className="big-post__head">
+        <h1 className="big-post__title">{title}</h1>
+        <div className="actions">
+          {userCanDelete && <button>edit</button>}
+          {userCanDelete && <button onClick={handleDeletePost}>delete</button>}
+        </div>
+      </div>
+
+      <div className="big-post__image">
+        {image && <img src={image} alt="postImage" />}
+      </div>
+
+      <div className="big-post__info">
+        <p>Create by: {creator}</p>
+        <p>{createdAt}</p>
+        <p>{text}</p>
+      </div>
+
+      <div className="comments">
+        <h2>Comments (3)</h2>
+        <div className="comments-container">
+          <div className="comments__item">Коментарий один</div>
+          <div className="comments__item">Коментарий 2</div>
+          <div className="comments__item">Коментарий 3</div>
+        </div>
+      </div>
     </div>
   );
 };

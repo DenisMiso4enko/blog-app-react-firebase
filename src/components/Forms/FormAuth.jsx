@@ -23,6 +23,7 @@ const FormAuth = () => {
           accessToken: user.accessToken,
           id: user?.uid,
           email: user.email,
+          displayName: user.displayName,
         })
       );
       navigate("/");

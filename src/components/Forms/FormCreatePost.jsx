@@ -7,7 +7,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 
 const FormCreatePost = () => {
   const postsCollectionRef = collection(db, "posts");
-  const { id, email } = useSelector((state) => state.user);
+  const { id, email, displayName } = useSelector((state) => state.user);
 
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
@@ -29,7 +29,7 @@ const FormCreatePost = () => {
         text,
         createdAt,
         userId: id,
-        creator: email,
+        creator: displayName,
         image: url,
       });
       setFile(null);
